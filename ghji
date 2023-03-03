@@ -1,0 +1,19 @@
+Console.Write("Введите свое имя: ");
+string? Text = Console.ReadLine();
+if (Text is not null)
+{
+    Console.WriteLine(Text);
+
+char[] Chars = Text.ToCharArray();
+for (int i = 0; i < Chars.Length; i++)
+{
+    Console.Clear();
+    Console.WriteLine(Chars[i]);
+    char? symbool = Convert.ToChar(Console.ReadLine()!);
+    if (Chars[i] == symbool)
+    {
+        Console.WriteLine("Успех!");
+    }
+     Console.WriteLine("Неправильно!");
+}
+}
